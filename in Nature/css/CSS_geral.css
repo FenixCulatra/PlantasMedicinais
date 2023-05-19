@@ -1,0 +1,71 @@
+/*Fonte: */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap');
+
+/* Para Debug */
+/* div{
+    border: 1px solid black;
+} */
+
+/* estilo do Cabeçalho */
+
+
+/* ajeitando fonte e colocando um padrão */
+* {
+    font-family: 'Cormorant Garamond', serif;;
+    margin: 0px;
+    padding: 0px;
+}
+
+/* mudando o tamanho da fonte dependendo do tamanho da tela do navegador */
+html {
+    font-size: calc(1.5vh);
+}
+
+/* ajeitando o body para ele ser flex */
+body {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* border: 10px solid black; */
+}
+
+/* barra de navegação */
+#head {
+    background-color: #d3f3e1;
+}
+
+/* tamanho da logo */
+#logo {
+    height: 5rem;
+}
+
+/* lupa */
+#img_lupa {
+    height: 4rem;
+}
+
+/* links da barra de navegação */
+#nav li a{
+    color: #1fa25d;
+    font-size: 1.6rem;
+}
+
+/* botão de login */
+#login{
+    background-color: #f8f0e8;
+    border: 3px #bbbcbd solid;
+    border-radius: 50pt;
+    font-size: 1.2rem;
+}
+
+/* botao de cadastro */
+#singin{
+    background-color: #bbbcbd;
+    border: 3px #858b92 solid;
+    border-radius: 2rem;
+    font-size: 1.2rem;
+}
+
+
+
