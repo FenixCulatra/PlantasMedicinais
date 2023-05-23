@@ -1,9 +1,9 @@
 #fotoPerfil {
-height:1.8rem
-    }
-    
+    height: 2.8rem;
+}
+
 .tamanhoLogo {
-    height: 2rem;
+    height: 3.5rem;
 }
 
 .sidenav {
@@ -43,3 +43,12 @@ height:1.8rem
     display:block;
     
 } */
+
+.bi-search {
+    height: 1.2rem;
+}
+
+
+input[type="search"]:focus {
+    box-shadow: none;
+}
