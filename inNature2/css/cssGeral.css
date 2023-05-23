@@ -1,7 +1,9 @@
-
-
+#fotoPerfil {
+height:1.8rem
+    }
+    
 .tamanhoLogo {
-    width: 8rem;
+    height: 2rem;
 }
 
 .sidenav {
