@@ -1,0 +1,30 @@
+.maisPesquisados-title {
+    background-color: transparent;
+    height: fit-content;
+}
+
+#maisPesquisados {
+    background-color: var(--cor-detalhe);
+    color: white;
+    font-size: 1.8rem;
+    border-radius: 10px;
+}
+
+#img_maisPesquisado{
+    height: min-content;
+}
+
+
+#img_maisPesquisado div.col {
+    height: min-content;
+    width: min-content;
+    padding: 4px;
+    justify-content: start;
+    margin: 4px;
+
+}
+
+#img_maisPesquisado div.col img{
+    width: 100%;
+    border-radius: 5px;
+}
