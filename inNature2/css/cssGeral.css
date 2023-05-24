@@ -2,6 +2,10 @@
     height: 2.8rem;
 }
 
+.navbar-container {
+    box-shadow: 0 1px 7px rgba(0,0,0,0.188);
+}
+
 .tamanhoLogo {
     height: 3.5rem;
 }
