@@ -1,9 +1,13 @@
 * {
-    --cor-primaria:         #C5E677;
-    --cor-secundaria:       #8EE687;
+    --cor-primaria:         #8ee288;
+    --cor-secundaria:       #a0e79a;
     --cor-detalhe:          #BDFFCA;
     --cor-terciario:        #8EE687;
     --cor-quartenario:      #FAF989;
+}
+
+.cor-primaria {
+    color: #3c9135;
 }
 
 .bg-primaria {
