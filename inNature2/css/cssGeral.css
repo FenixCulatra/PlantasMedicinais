@@ -51,35 +51,12 @@ ul.modal-ul li {
     width: 2rem;
 }
 
-@keyframes show {
-    from{transform: translateY(-10cqw);}
-    to{transform: translateY(0cqw);}
-}
-@keyframes hide {
-    from{transform: translateY(0cqw);}
-    to{transform: translateY(-10cqw);}
-}
-
-/* .float-animation-right {
-    position: relative;
-    animation-fill-mode: forwards;
-    animation-duration: 100ms;
-} */
-
 #modalId .modal-content{
     animation-fill-mode: forwards;
     animation-duration: 100ms;
 }
 
-/* #modalId[aria-modal="true"] .modal-content{
-    animation-name: show;
-}
 
-#modalId[aria-modal="false"]{
-    opacity: 0.5;
-    display:block;
-    
-} */
 
 .bi-search {
     height: 1.2rem;
@@ -88,4 +65,8 @@ ul.modal-ul li {
 
 input[type="search"]:focus {
     box-shadow: none;
+}
+
+footer .icon {
+    height: 1.2rem;
 }

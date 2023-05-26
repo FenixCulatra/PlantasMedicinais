@@ -4,18 +4,22 @@
 }
 
 #maisPesquisados {
-    background-color: var(--cor-detalhe);
-    color: white;
+    background-color: #F8F8F8;
     font-size: 1.8rem;
     border-radius: 10px;
 }
 
 #img_maisPesquisado{
     height: min-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    
 }
 
 
-#img_maisPesquisado div.col {
+#img_maisPesquisado div {
     height: min-content;
     width: min-content;
     padding: 4px;
@@ -24,7 +28,8 @@
 
 }
 
-#img_maisPesquisado div.col img{
-    width: 100%;
+#img_maisPesquisado div img{
+    width: 15rem;
     border-radius: 5px;
 }
+
