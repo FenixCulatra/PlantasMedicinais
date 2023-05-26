@@ -1,7 +1,6 @@
-var fotoPerfil = document.getElementById("fotoPerfil");
+
 var maisPesquisados = document.getElementById("img_maisPesquisado");
-var logado = false;
-var tem_foto = false;
+
 var LmP = [
     {
         "nome": "Gengibre",
@@ -16,11 +15,7 @@ var LmP = [
 ];
 
 
-if (logado && tem_foto) {
-    alert("Hã?")
-} else {
-    fotoPerfil.src = "img/foto_padrao.png";
-}
+
 
 
 
