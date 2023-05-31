@@ -10,7 +10,7 @@ header.innerHTML = `<nav class="navbar d-inline p-0">
     </button>
 
     <!-- Logo -->
-    <a href="#" class="navbar-brand">
+    <a href="index.html" class="navbar-brand">
         <img class="tamanhoLogo" src="img/logo.png" alt="">
     </a>
     
@@ -35,7 +35,7 @@ header.innerHTML = `<nav class="navbar d-inline p-0">
             </svg>
         </a>
         
-        <a href="#" class="navbar-brand" alt="Foto de Perfil">
+        <a href="cadastro-usuario.html" class="navbar-brand" alt="Foto de Perfil" onclick="">
             <img id="fotoPerfil" src=""  class="img-fluid rounded-circle">
         </a>
     </div>
@@ -160,14 +160,25 @@ footer.innerHTML = `<div class="container-fluid flex-row">
   </svg> -->
 </div>`;
 
+// Check browser support
+if (typeof(Storage) !== "undefined") {
+    let logado = localStorage.getItem("logado");
+    // Store
+    if (logado != "0" || logado != "1") {
+        localStorage.setItem("logado", "0");
+    }
+  } else {
+   alert("Não é possível logar neste navegador");
+  }
+
 var fotoPerfil = document.getElementById("fotoPerfil");
-var logado = false;
-var tem_foto = false;
+var logado = localStorage.getItem("logado");
 
-console.log(fotoPerfil);
+// console.log(fotoPerfil);
 
-if (logado && tem_foto) {
-    alert("Hã?")
+if (logado == "1") {
+    fotoPerfil.src = "img/foto_padrao-verde.png";
 } else {
     fotoPerfil.src = "img/foto_padrao.png";
 }
+
