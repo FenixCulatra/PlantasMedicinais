@@ -11,5 +11,6 @@ submit.addEventListener("click", (et) => {
         localStorage.setItem("email", cd_email.value);
         localStorage.setItem("senha", cd_senha.value);
         localStorage.setItem("logado", "1");
+        window.location.href = "index.html";
     }
 })

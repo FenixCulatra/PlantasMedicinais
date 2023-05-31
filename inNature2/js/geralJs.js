@@ -35,7 +35,7 @@ header.innerHTML = `<nav class="navbar d-inline p-0">
             </svg>
         </a>
         
-        <a href="cadastro-usuario.html" class="navbar-brand" alt="Foto de Perfil" onclick="">
+        <a href="cadastro-usuario.html" class="navbar-brand" alt="Foto de Perfil" id="usuario">
             <img id="fotoPerfil" src=""  class="img-fluid rounded-circle">
         </a>
     </div>
@@ -164,7 +164,7 @@ footer.innerHTML = `<div class="container-fluid flex-row">
 if (typeof(Storage) !== "undefined") {
     let logado = localStorage.getItem("logado");
     // Store
-    if (logado != "0" || logado != "1") {
+    if (logado != "0" && logado != "1") {
         localStorage.setItem("logado", "0");
     }
   } else {
@@ -172,13 +172,17 @@ if (typeof(Storage) !== "undefined") {
   }
 
 var fotoPerfil = document.getElementById("fotoPerfil");
+var usuario = document.getElementById("usuario");
 var logado = localStorage.getItem("logado");
 
 // console.log(fotoPerfil);
 
 if (logado == "1") {
     fotoPerfil.src = "img/foto_padrao-verde.png";
+    usuario.href = "usuario.html";
+    
 } else {
     fotoPerfil.src = "img/foto_padrao.png";
+    usuario.href = "cadastro-usuario.html";
 }
 
