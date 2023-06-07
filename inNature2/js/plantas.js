@@ -42,6 +42,7 @@ for (let i = 0; i < pl.length; i++) {
             let star = document.createElement("span");
             star.innerHTML = "&#9733";
             star.style.color = "yellow";
+            star.classList.add("fs-2")
             nota_e.appendChild(star);
         } else {
             let star = document.createElement("span");
@@ -50,10 +51,20 @@ for (let i = 0; i < pl.length; i++) {
             nota_e.appendChild(star);
         }
     }
-    div.appendChild(nota_e);
-    div.appendChild(nota_t)
+    // div.appendChild(nota_e);
+    // div.appendChild(nota_t)
     div.appendChild(title);
-    
+    div.setAttribute("planta", i);
+
+    div.addEventListener("click", (ev) => {
+        if (typeof(Storage) !== "undefined") {
+            localStorage.setItem("planta selecionada", ev.target.parentElement.getAttribute("planta"));
+            window.location.href = "planta.html";
+          } else {
+            alert("O nosso site não funciona corretamente no seu navegador")
+          }
+    });
+
     // console.log(div);
     plantas.appendChild(div);
 }

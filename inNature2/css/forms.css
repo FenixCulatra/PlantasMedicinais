@@ -1,8 +1,23 @@
 
-form.form {
-
+form.form div.form{
+      padding: 1rem;
       max-width: 300px;
-      background: #000;
+      background-color: rgb(248 249 250);
       border-radius: 8px;
-    } 
+      /* color:#696969; */
+      color:#637E8A;
+      margin:2px;
+    }
 
+
+h1 {
+  color:#26374D;
+}
+
+
+#submit {
+  color: red;
+}
+.form-submit {
+
+}

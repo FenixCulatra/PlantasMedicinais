@@ -1,0 +1,4 @@
+form.cadastro input, form.cadastro textarea {
+    border: 1px solid #e2dcda;
+    border-radius: 0.2rem;
+}

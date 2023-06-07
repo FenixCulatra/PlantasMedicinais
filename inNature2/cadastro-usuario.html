@@ -17,7 +17,7 @@
     </header>
 
     <main class="mt-4 flex-grow-1">
-        <div class="container">
+        <div class="container d-flex justify-content-center">
         <h1>Cadastrar Usuário</h1>
         <form class = "form" method="post" id="cadastro">
             <div class="form">
@@ -26,24 +26,21 @@
                     <label class="form-label" for="cd_nome">Nome</label>
                     <input type="text" class="form-control" name="cd_nome" id="cd_nome" required>
     
-                    <label class="form-label m-2" for="cd_nome">Email</label>
+                    <label class="form-label" for="cd_nome">Email</label>
                     <input type="email" class="form-control" name="cd_email" id="cd_email" required>
 
                     <label class="form-label" for="cd_senha">Senha</label>
                     <input type="text" class="form-control" name="cd_senha" id="cd_senha" required>
 
-                    <label class="form-label m-2" for="cd_senha-confirmar">Confirmar Senha</label>
+                    <label class="form-label" for="cd_senha-confirmar">Confirmar Senha</label>
                     <input type="text" class="form-control" name="cd_senha_confirmar" id="cd_senha_confirmar" required>
-                    <label for="possiu_conta">Já possui uma conta?<a href = "#">Acesse!</a></label>
+                    
 
-            
+                    <input class="form-submit"  type="submit" id="submit" value="Cadastrar">
+                    <label for="possiu_conta">Já possui uma conta?<a href = "#">Acesse!</a></label>
         </div>
         </form>
-        <div class="row mt-2 mx-auto">
-            <div class="col d-flex justify-content-end">
-                <input class="mx-1 border-0 p-1 "  type="submit" id="submit" value="Cadastrar">
-            </div>
-        </div>
+        
     </div>
     </main>
         
