@@ -81,3 +81,65 @@ ALTER TABLE USUARIO_PLANTA ADD CONSTRAINT FK_USUARIO_PLANTA_2
     FOREIGN KEY (FK_PLANTA_cod_plt)
     REFERENCES PLANTA (cod_plt)
     ON DELETE SET NULL;
+
+-- INSERTS
+
+-- Usuário ADMIN
+INSERT INTO USUARIO (nome, email, senha, permissao)
+VALUES ('Admin User', 'admin@example.com', 'admin123', 'A');
+
+-- Usuários COLABORADORES
+INSERT INTO USUARIO (nome, email, senha, permissao)
+VALUES ('João Pedro', 'joaopedro@example.com', 'colab123', 'C');
+INSERT INTO USUARIO (nome, email, senha, permissao)
+VALUES ('Carlos Almeida', 'carlosalmeida@example.com', 'colab456', 'C');
+
+-- Usuários NORMAL
+INSERT INTO USUARIO (nome, email, senha, permissao)
+VALUES ('Mariana Silva', 'marianasilva@example.com', 'user123', 'N');
+INSERT INTO USUARIO (nome, email, senha, permissao)
+VALUES ('Ana Santos', 'anasantos@example.com', 'user456', 'N');
+-- Usuários NORMAL
+INSERT INTO USUARIO (nome, email, senha, permissao)
+VALUES ('Mariana Silva', 'marianasilva@example.com', 'user123', 'N');
+INSERT INTO USUARIO (nome, email, senha, permissao)
+VALUES ('Ana Santos', 'anasantos@example.com', 'user456', 'N');
+INSERT INTO USUARIO (nome, email, senha, permissao)
+VALUES ('Pedro Oliveira', 'pedrooliveira@example.com', 'user789', 'N');
+INSERT INTO USUARIO (nome, email, senha, permissao)
+VALUES ('Camila Costa', 'camilacosta@example.com', 'user987', 'N');
+INSERT INTO USUARIO (nome, email, senha, permissao)
+VALUES ('Lucas Rodrigues', 'lucasrodrigues@example.com', 'user654', 'N');
+-- Adicione mais registros de usuários normais conforme necessário
+
+
+INSERT INTO PLANTA (nome, imagem)
+VALUES ('Capim Limão', '');
+INSERT INTO PLANTA (nome, imagem)
+VALUES ('Camomila', '');
+INSERT INTO PLANTA (nome, imagem)
+VALUES ('Erva Cidreira', '');
+INSERT INTO PLANTA (nome, imagem)
+VALUES ('Hortelã', '');
+INSERT INTO PLANTA (nome, imagem)
+VALUES ('Alecrim', '');
+INSERT INTO PLANTA (nome, imagem)
+VALUES ('Calêndula', '');
+INSERT INTO PLANTA (nome, imagem)
+VALUES ('Valeriana', '');
+INSERT INTO PLANTA (nome, imagem)
+VALUES ('Gengibre', '');
+INSERT INTO PLANTA (nome, imagem)
+VALUES ('Dente-de-leão', '');
+INSERT INTO PLANTA (nome, imagem)
+VALUES ('Melissa', '');
+INSERT INTO PLANTA (nome, imagem)
+VALUES ('Hibisco', '');
+INSERT INTO PLANTA (nome, imagem)
+VALUES ('Canela', '');
+INSERT INTO PLANTA (nome, imagem)
+VALUES ('Chá Verde', '');
+-- Adicione mais plantas medicinais conforme necessário
+
+
+
