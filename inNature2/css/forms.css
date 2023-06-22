@@ -1,23 +1,46 @@
 
-form.form div.form{
-      padding: 1rem;
-      max-width: 300px;
-      background-color: rgb(248 249 250);
-      border-radius: 8px;
-      /* color:#696969; */
-      color:#637E8A;
-      margin:2px;
-    }
-
+form.form div{
+  max-width: 300px;
+  background-color: rgb(248 249 250);
+  border-radius: 8px;
+  color:#637E8A;
+}
+form.form div input{
+background-color: white;
+width: 90%;
+margin-left:5%;
+border-radius: 20px;
+}
+form.form div label{
+margin-left:5%;
+}
 
 h1 {
-  color:#26374D;
+color:#26374D;
+font-size:xx-large;
+margin-bottom: 20px;
+background-color: #ece9ce;
+border-top-left-radius: 20px;
+border-top-right-radius: 20px;
+padding: 10px;
 }
 
 
-#submit {
-  color: red;
+form.form div #submit {
+color: #26374D;
+background-color: #ece9ce;
+margin-top: 30px;
+margin-bottom: 10px;
+border-radius: 20px;
+border:1px solid #26374D;
 }
-.form-submit {
+form.form div{
+background-color: rgb(250, 250, 250);
+border-radius: 20px;
+border-radius: 23px;
 
+}
+
+form.form div label#possiu_conta{
+padding-bottom: 10px;
 }
