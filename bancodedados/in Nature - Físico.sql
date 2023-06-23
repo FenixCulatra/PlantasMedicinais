@@ -216,3 +216,39 @@ VALUES
     (8, 3), -- Chá de Hortelã: Contribui para o alívio de dores musculares
     (9, 4), -- Chá de Erva-Cidreira: Auxilia na digestão de alimentos pesados
     (10, 5); -- Chá Verde: Melhora o sistema imunológico
+
+-- Inserts na tabela CONTRAINDICACAO
+INSERT INTO CONTRAINDICACAO (descricao)
+VALUES
+    ('Não recomendado para gestantes'),
+    ('Evitar em casos de alergia ao ingrediente'),
+    ('Não recomendado para pessoas com pressão alta'),
+    ('Pode causar irritação gastrointestinal em algumas pessoas'),
+    ('Em excesso, pode afetar a absorção de nutrientes');
+
+-- Inserts na tabela PREPARO_CONTRAINDICACAO
+INSERT INTO PREPARO_CONTRAINDICACAO (FK_CONTRAINDICACAO_cod_cinc, FK_PREPARO_cod_prp)
+VALUES
+    (6, 1), -- Chá de Capim Limão: Não recomendado para gestantes
+    (7, 2), -- Chá de Camomila: Evitar em casos de alergia ao ingrediente
+    (8, 3), -- Chá de Hortelã: Não recomendado para pessoas com pressão alta
+    (9, 4), -- Chá de Erva-Cidreira: Pode causar irritação gastrointestinal em algumas pessoas
+    (10, 5); -- Chá Verde: Em excesso, pode afetar a absorção de nutrientes
+
+-- Inserts na tabela EFEITO_COLATERAL
+INSERT INTO EFEITO_COLATERAL (descricao)
+VALUES
+    ('Possível irritação na pele'),
+    ('Pode causar sonolência em algumas pessoas'),
+    ('Podem ocorrer dores de cabeça'),
+    ('Pode causar aumento da frequência urinária'),
+    ('Pode interferir na qualidade do sono');
+
+-- Inserts na tabela PREPARO_EFEITO_COLATERAL
+INSERT INTO PREPARO_EFEITO_COLATERAL (FK_EFEITO_COLATERAL_cod_eftcol, FK_PREPARO_cod_prp)
+VALUES
+    (6, 1), -- Chá de Capim Limão: Possível irritação na pele
+    (7, 2), -- Chá de Camomila: Pode causar sonolência em algumas pessoas
+    (8, 3), -- Chá de Hortelã: Podem ocorrer dores de cabeça
+    (9, 4), -- Chá de Erva-Cidreira: Pode causar aumento da frequência urinária
+    (10, 5); -- Chá Verde: Pode interferir na qualidade do sono
