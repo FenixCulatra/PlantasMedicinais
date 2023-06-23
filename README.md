@@ -8,4 +8,4 @@ https://fenixculatra.github.io/PlantasMedicinais/inNature/index.html
 
 https://fenixculatra.github.io/PlantasMedicinais/inNature2/index.html
 
-V.: 2.24
+V.: 2.25
