@@ -1,4 +1,4 @@
-/* in Nature - LÛgico: */
+/* in Nature - L√≥gico: */
 
 CREATE TABLE USUARIO (
     cod_usr serial PRIMARY KEY,
@@ -112,7 +112,7 @@ ALTER TABLE PREPARO_EFEITO_COLATERAL ADD CONSTRAINT FK_PREPARO_EFEITO_COLATERAL_
 -- Inserts na tabela USUARIO
 INSERT INTO USUARIO (nome, email, senha, permissao)
 VALUES
-    ('Jo„o Pedro', 'joaopedro@example.com', 'senha123', 'A'),
+    ('Jo√£o Pedro', 'joaopedro@example.com', 'senha123', 'A'),
     ('Carlos', 'carlos@example.com', 'senha456', 'B'),
     ('Maria Silva', 'mariasilva@example.com', 'senha789', 'A'),
     ('Ana Souza', 'anasouza@example.com', 'senha321', 'B'),
@@ -121,80 +121,98 @@ VALUES
 -- Inserts na tabela PLANTA
 INSERT INTO PLANTA (nome, imagem)
 VALUES
-    ('Capim Lim„o', 'capim_limao.jpg'),
+    ('Capim Lim√£o', 'capim_limao.jpg'),
     ('Camomila', 'camomila.jpg'),
-    ('Hortel„', 'hortela.jpg'),
+    ('Hortel√£', 'hortela.jpg'),
     ('Erva-Cidreira', 'erva_cidreira.jpg'),
-    ('Ch· Verde', 'cha_verde.jpg');
+    ('Ch√° Verde', 'cha_verde.jpg');
 
 -- Inserts na tabela PREPARO
 INSERT INTO PREPARO (descricao)
 VALUES
-    ('Ch· de Capim Lim„o: Ferver as folhas de capim lim„o em ·gua por 10 minutos.'),
-    ('Ch· de Camomila: Colocar as flores de camomila em ·gua quente por 5 minutos.'),
-    ('Ch· de Hortel„: Adicionar folhas de hortel„ em ·gua fervente por 3 minutos.'),
-    ('Ch· de Erva-Cidreira: Infundir folhas de erva-cidreira em ·gua quente por 7 minutos.'),
-    ('Ch· Verde: Preparar o ch· verde em ·gua quente por 2 minutos.');
+    ('Ch√° de Capim Lim√£o: Ferver as folhas de capim lim√£o em √°gua por 10 minutos.'),
+    ('Ch√° de Camomila: Colocar as flores de camomila em √°gua quente por 5 minutos.'),
+    ('Ch√° de Hortel√£: Adicionar folhas de hortel√£ em √°gua fervente por 3 minutos.'),
+    ('Ch√° de Erva-Cidreira: Infundir folhas de erva-cidreira em √°gua quente por 7 minutos.'),
+    ('Ch√° Verde: Preparar o ch√° verde em √°gua quente por 2 minutos.');
 
 -- Inserts na tabela INDICACAO
 INSERT INTO INDICACAO (descricao)
 VALUES
-    ('AlÌvio de estresse e ansiedade'),
-    ('Auxilia na digest„o'),
+    ('Al√≠vio de estresse e ansiedade'),
+    ('Auxilia na digest√£o'),
     ('Promove relaxamento e sono tranquilo'),
-    ('Ajuda a aliviar dores de cabeÁa'),
+    ('Ajuda a aliviar dores de cabe√ßa'),
     ('Estimula o metabolismo e auxilia na perda de peso');
 
 -- Inserts na tabela CONTRAINDICACAO
 INSERT INTO CONTRAINDICACAO (descricao)
 VALUES
-    ('N„o recomendado para pessoas com alergia a capim lim„o'),
-    ('Pode causar reaÁıes alÈrgicas em pessoas sensÌveis ‡ camomila'),
-    ('Evitar em casos de refluxo gastroesof·gico'),
-    ('N„o recomendado para pessoas com press„o baixa'),
-    ('Em excesso, pode causar insÙnia e irritabilidade');
+    ('N√£o recomendado para pessoas com alergia a capim lim√£o'),
+    ('Pode causar rea√ß√µes al√©rgicas em pessoas sens√≠veis √† camomila'),
+    ('Evitar em casos de refluxo gastroesof√°gico'),
+    ('N√£o recomendado para pessoas com press√£o baixa'),
+    ('Em excesso, pode causar ins√¥nia e irritabilidade');
 
 -- Inserts na tabela EFEITO_COLATERAL
 INSERT INTO EFEITO_COLATERAL (descricao)
 VALUES
     ('Nenhum efeito colateral conhecido'),
-    ('PossÌveis reaÁıes alÈrgicas em algumas pessoas'),
-    ('Pode causar irritaÁ„o estomacal em grandes quantidades'),
-    ('Pode causar sonolÍncia em algumas pessoas'),
-    ('Em excesso, pode causar nervosismo e palpitaÁıes');
+    ('Poss√≠veis rea√ß√µes al√©rgicas em algumas pessoas'),
+    ('Pode causar irrita√ß√£o estomacal em grandes quantidades'),
+    ('Pode causar sonol√™ncia em algumas pessoas'),
+    ('Em excesso, pode causar nervosismo e palpita√ß√µes');
 
 -- Inserts na tabela PREPARO_INDICACAO
 INSERT INTO PREPARO_INDICACAO (FK_INDICACAO_cod_inc, FK_PREPARO_cod_prp)
 VALUES
-    (1, 1), -- Ch· de Capim Lim„o: AlÌvio de estresse e ansiedade
-    (2, 2), -- Ch· de Camomila: Auxilia na digest„o
-    (3, 3), -- Ch· de Hortel„: Promove relaxamento e sono tranquilo
-    (4, 4), -- Ch· de Erva-Cidreira: Ajuda a aliviar dores de cabeÁa
-    (5, 5); -- Ch· Verde: Estimula o metabolismo e auxilia na perda de peso
+    (1, 1), -- Ch√° de Capim Lim√£o: Al√≠vio de estresse e ansiedade
+    (2, 2), -- Ch√° de Camomila: Auxilia na digest√£o
+    (3, 3), -- Ch√° de Hortel√£: Promove relaxamento e sono tranquilo
+    (4, 4), -- Ch√° de Erva-Cidreira: Ajuda a aliviar dores de cabe√ßa
+    (5, 5); -- Ch√° Verde: Estimula o metabolismo e auxilia na perda de peso
 
 -- Inserts na tabela PREPARO_CONTRAINDICACAO
 INSERT INTO PREPARO_CONTRAINDICACAO (FK_CONTRAINDICACAO_cod_cinc, FK_PREPARO_cod_prp)
 VALUES
-    (1, 1), -- Ch· de Capim Lim„o: N„o recomendado para pessoas com alergia a capim lim„o
-    (2, 2), -- Ch· de Camomila: Pode causar reaÁıes alÈrgicas em pessoas sensÌveis ‡ camomila
-    (3, 3), -- Ch· de Hortel„: Evitar em casos de refluxo gastroesof·gico
-    (4, 4), -- Ch· de Erva-Cidreira: N„o recomendado para pessoas com press„o baixa
-    (5, 5); -- Ch· Verde: Em excesso, pode causar insÙnia e irritabilidade
+    (1, 1), -- Ch√° de Capim Lim√£o: N√£o recomendado para pessoas com alergia a capim lim√£o
+    (2, 2), -- Ch√° de Camomila: Pode causar rea√ß√µes al√©rgicas em pessoas sens√≠veis √† camomila
+    (3, 3), -- Ch√° de Hortel√£: Evitar em casos de refluxo gastroesof√°gico
+    (4, 4), -- Ch√° de Erva-Cidreira: N√£o recomendado para pessoas com press√£o baixa
+    (5, 5); -- Ch√° Verde: Em excesso, pode causar ins√¥nia e irritabilidade
 
 -- Inserts na tabela PREPARO_EFEITO_COLATERAL
 INSERT INTO PREPARO_EFEITO_COLATERAL (FK_EFEITO_COLATERAL_cod_eftcol, FK_PREPARO_cod_prp)
 VALUES
-    (1, 1), -- Ch· de Capim Lim„o: Nenhum efeito colateral conhecido
-    (2, 2), -- Ch· de Camomila: PossÌveis reaÁıes alÈrgicas em algumas pessoas
-    (3, 3), -- Ch· de Hortel„: Pode causar irritaÁ„o estomacal em grandes quantidades
-    (4, 4), -- Ch· de Erva-Cidreira: Pode causar sonolÍncia em algumas pessoas
-    (5, 5); -- Ch· Verde: Em excesso, pode causar nervosismo e palpitaÁıes
+    (1, 1), -- Ch√° de Capim Lim√£o: Nenhum efeito colateral conhecido
+    (2, 2), -- Ch√° de Camomila: Poss√≠veis rea√ß√µes al√©rgicas em algumas pessoas
+    (3, 3), -- Ch√° de Hortel√£: Pode causar irrita√ß√£o estomacal em grandes quantidades
+    (4, 4), -- Ch√° de Erva-Cidreira: Pode causar sonol√™ncia em algumas pessoas
+    (5, 5); -- Ch√° Verde: Em excesso, pode causar nervosismo e palpita√ß√µes
 
 -- Inserts na tabela PLANTA_PREPARO
 INSERT INTO PLANTA_PREPARO (FK_PLANTA_cod_plt, FK_PREPARO_cod_prp)
 VALUES
-    (1, 1), -- Capim Lim„o: Ch· de Capim Lim„o
-    (2, 2), -- Camomila: Ch· de Camomila
-    (3, 3), -- Hortel„: Ch· de Hortel„
-    (4, 4), -- Erva-Cidreira: Ch· de Erva-Cidreira
-    (5, 5); -- Ch· Verde: Ch· Verde
+    (1, 1), -- Capim Lim√£o: Ch√° de Capim Lim√£o
+    (2, 2), -- Camomila: Ch√° de Camomila
+    (3, 3), -- Hortel√£: Ch√° de Hortel√£
+    (4, 4), -- Erva-Cidreira: Ch√° de Erva-Cidreira
+    (5, 5); -- Ch√° Verde: Ch√° Verde
+
+-- Inserts na tabela INDICACAO
+INSERT INTO INDICACAO (descricao)
+VALUES
+    ('Promove a sa√∫de cardiovascular'),
+    ('Ajuda a aliviar sintomas de gripe e resfriado'),
+    ('Contribui para o al√≠vio de dores musculares'),
+    ('Auxilia na digest√£o de alimentos pesados'),
+    ('Melhora o sistema imunol√≥gico');
+
+-- Inserts na tabela PREPARO_INDICACAO
+INSERT INTO PREPARO_INDICACAO (FK_INDICACAO_cod_inc, FK_PREPARO_cod_prp)
+VALUES
+    (6, 1), -- Ch√° de Capim Lim√£o: Promove a sa√∫de cardiovascular
+    (7, 2), -- Ch√° de Camomila: Ajuda a aliviar sintomas de gripe e resfriado
+    (8, 3), -- Ch√° de Hortel√£: Contribui para o al√≠vio de dores musculares
+    (9, 4), -- Ch√° de Erva-Cidreira: Auxilia na digest√£o de alimentos pesados
+    (10, 5); -- Ch√° Verde: Melhora o sistema imunol√≥gico
