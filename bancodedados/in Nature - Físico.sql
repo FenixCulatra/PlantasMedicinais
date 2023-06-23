@@ -121,11 +121,11 @@ VALUES
 -- Inserts na tabela PLANTA
 INSERT INTO PLANTA (nome, imagem)
 VALUES
-    ('Capim Limão', 'capim_limao.jpg'),
-    ('Camomila', 'camomila.jpg'),
-    ('Hortelã', 'hortela.jpg'),
-    ('Erva-Cidreira', 'erva_cidreira.jpg'),
-    ('Chá Verde', 'cha_verde.jpg');
+    ('Capim Limão', 'https://fenixculatra.github.io/PlantasMedicinais/imagens/capim-limao.jpg'),
+    ('Camomila', 'https://fenixculatra.github.io/PlantasMedicinais/imagens/camomila.jpg'),
+    ('Hortelã', 'https://fenixculatra.github.io/PlantasMedicinais/imagens/hortela.jpg'),
+    ('Erva-Cidreira', 'https://fenixculatra.github.io/PlantasMedicinais/imagens/erva-cidreira.jpg'),
+    ('Chá Verde', 'https://fenixculatra.github.io/PlantasMedicinais/imagens/cha-verde.jpg');
 
 -- Inserts na tabela PREPARO
 INSERT INTO PREPARO (descricao)
