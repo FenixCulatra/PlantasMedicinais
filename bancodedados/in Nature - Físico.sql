@@ -252,3 +252,47 @@ VALUES
     (8, 3), -- Chá de Hortelã: Podem ocorrer dores de cabeça
     (9, 4), -- Chá de Erva-Cidreira: Pode causar aumento da frequência urinária
     (10, 5); -- Chá Verde: Pode interferir na qualidade do sono
+-- Inserts na tabela PREPARO
+INSERT INTO PREPARO (descricao)
+VALUES
+    ('Chá de Capim Limão com Hortelã'),
+    ('Chá de Camomila com Erva-Cidreira'),
+    ('Chá de Hortelã com Capim Limão'),
+    ('Chá de Erva-Cidreira com Camomila'),
+    ('Chá Verde com Hortelã');
+
+-- Inserts na tabela PLANTA_PREPARO
+INSERT INTO PLANTA_PREPARO (FK_PLANTA_cod_plt, FK_PREPARO_cod_prp)
+VALUES
+    (1, 6), -- Capim Limão: Chá de Capim Limão com Hortelã
+    (2, 7), -- Camomila: Chá de Camomila com Erva-Cidreira
+    (3, 8), -- Hortelã: Chá de Hortelã com Capim Limão
+    (4, 9), -- Erva-Cidreira: Chá de Erva-Cidreira com Camomila
+    (5, 10); -- Chá Verde: Chá Verde com Hortelã
+
+-- Inserts na tabela PREPARO_INDICACAO
+INSERT INTO PREPARO_INDICACAO (FK_INDICACAO_cod_inc, FK_PREPARO_cod_prp)
+VALUES
+    (6, 6), -- Chá de Capim Limão com Hortelã: Promove a saúde cardiovascular
+    (7, 7), -- Chá de Camomila com Erva-Cidreira: Ajuda a aliviar sintomas de gripe e resfriado
+    (8, 8), -- Chá de Hortelã com Capim Limão: Contribui para o alívio de dores musculares
+    (9, 9), -- Chá de Erva-Cidreira com Camomila: Auxilia na digestão de alimentos pesados
+    (10, 10); -- Chá Verde com Hortelã: Melhora o sistema imunológico
+
+-- Inserts na tabela PREPARO_CONTRAINDICACAO
+INSERT INTO PREPARO_CONTRAINDICACAO (FK_CONTRAINDICACAO_cod_cinc, FK_PREPARO_cod_prp)
+VALUES
+    (6, 6), -- Chá de Capim Limão com Hortelã: Não recomendado para gestantes
+    (7, 7), -- Chá de Camomila com Erva-Cidreira: Evitar em casos de alergia ao ingrediente
+    (8, 8), -- Chá de Hortelã com Capim Limão: Não recomendado para pessoas com pressão alta
+    (9, 9), -- Chá de Erva-Cidreira com Camomila: Pode causar irritação gastrointestinal em algumas pessoas
+    (10, 10); -- Chá Verde com Hortelã: Em excesso, pode afetar a absorção de nutrientes
+
+-- Inserts na tabela PREPARO_EFEITO_COLATERAL
+INSERT INTO PREPARO_EFEITO_COLATERAL (FK_EFEITO_COLATERAL_cod_eftcol, FK_PREPARO_cod_prp)
+VALUES
+    (6, 6), -- Chá de Capim Limão com Hortelã: Possível irritação na pele
+    (7, 7), -- Chá de Camomila com Erva-Cidreira: Pode causar sonolência em algumas pessoas
+    (8, 8), -- Chá de Hortelã com Capim Limão: Podem ocorrer dores de cabeça
+    (9, 9), -- Chá de Erva-Cidreira com Camomila: Pode causar aumento da frequência urinária
+    (10, 10); -- Chá Verde com Hortelã: Pode interferir na qualidade do sono
