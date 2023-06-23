@@ -55,5 +55,5 @@ form.form div.alert{
   margin-top: 0px;
   margin-bottom: 0px;
   font-size:x-small;
-  display:flex;
+  display:none;
 }
