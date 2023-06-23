@@ -26,15 +26,25 @@
 
                     <label class="form-label" for="cd_nome">Nome</label>
                     <input type="text" class="form-control" name="cd_nome" id="cd_nome" required>
-    
+                    <div class = "alert" id = "alerta1">O campo não pode estar vazio!</div>
+
+
                     <label class="form-label" for="cd_nome">Email</label>
                     <input type="email" class="form-control" name="cd_email" id="cd_email" required>
+                    <div class = "alert" id = "alerta">O campo não pode estar vazio!</div>
+                    <div class = "alert" id = "alerta">Este email não é válido!</div>
+
 
                     <label class="form-label" for="cd_senha">Senha</label>
                     <input type="password" class="form-control" name="cd_senha" id="cd_senha" required>
+                    <div class = "alert" id = "alerta">O campo não pode estar vazio!</div>
+                    <div class = "alert" id = "alerta">A senha deve ter entre 6 e 20 caracteres!</div>
+
 
                     <label class="form-label" for="cd_senha-confirmar">Confirmar Senha</label>
                     <input type="password" class="form-control" name="cd_senha_confirmar" id="cd_senha_confirmar" required>
+                    <div class = "alert" id = "alerta">O campo não pode estar vazio!</div>
+                    <div class = "alert" id = "alerta">Esta senha é diferente da previamente escolhida!</div>
                     
 
                     <input class="form-submit"  type="submit" id="submit" value="Cadastrar"><br>
