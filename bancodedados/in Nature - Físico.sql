@@ -16,7 +16,7 @@ CREATE TABLE PLANTA (
 
 CREATE TABLE PREPARO (
     cod_prp serial PRIMARY KEY,
-    descricao varchar(2000)not
+    descricao varchar(2000)
 );
 
 CREATE TABLE INDICACAO (
@@ -108,3 +108,93 @@ ALTER TABLE PREPARO_EFEITO_COLATERAL ADD CONSTRAINT FK_PREPARO_EFEITO_COLATERAL_
     FOREIGN KEY (FK_PREPARO_cod_prp)
     REFERENCES PREPARO (cod_prp)
     ON DELETE SET NULL;
+
+-- Inserts na tabela USUARIO
+INSERT INTO USUARIO (nome, email, senha, permissao)
+VALUES
+    ('João Pedro', 'joaopedro@example.com', 'senha123', 'A'),
+    ('Carlos', 'carlos@example.com', 'senha456', 'B'),
+    ('Maria Silva', 'mariasilva@example.com', 'senha789', 'A'),
+    ('Ana Souza', 'anasouza@example.com', 'senha321', 'B'),
+    ('Pedro Henrique', 'pedrohenrique@example.com', 'senha654', 'A');
+
+-- Inserts na tabela PLANTA
+INSERT INTO PLANTA (nome, imagem)
+VALUES
+    ('Capim Limão', 'capim_limao.jpg'),
+    ('Camomila', 'camomila.jpg'),
+    ('Hortelã', 'hortela.jpg'),
+    ('Erva-Cidreira', 'erva_cidreira.jpg'),
+    ('Chá Verde', 'cha_verde.jpg');
+
+-- Inserts na tabela PREPARO
+INSERT INTO PREPARO (descricao)
+VALUES
+    ('Chá de Capim Limão: Ferver as folhas de capim limão em água por 10 minutos.'),
+    ('Chá de Camomila: Colocar as flores de camomila em água quente por 5 minutos.'),
+    ('Chá de Hortelã: Adicionar folhas de hortelã em água fervente por 3 minutos.'),
+    ('Chá de Erva-Cidreira: Infundir folhas de erva-cidreira em água quente por 7 minutos.'),
+    ('Chá Verde: Preparar o chá verde em água quente por 2 minutos.');
+
+-- Inserts na tabela INDICACAO
+INSERT INTO INDICACAO (descricao)
+VALUES
+    ('Alívio de estresse e ansiedade'),
+    ('Auxilia na digestão'),
+    ('Promove relaxamento e sono tranquilo'),
+    ('Ajuda a aliviar dores de cabeça'),
+    ('Estimula o metabolismo e auxilia na perda de peso');
+
+-- Inserts na tabela CONTRAINDICACAO
+INSERT INTO CONTRAINDICACAO (descricao)
+VALUES
+    ('Não recomendado para pessoas com alergia a capim limão'),
+    ('Pode causar reações alérgicas em pessoas sensíveis à camomila'),
+    ('Evitar em casos de refluxo gastroesofágico'),
+    ('Não recomendado para pessoas com pressão baixa'),
+    ('Em excesso, pode causar insônia e irritabilidade');
+
+-- Inserts na tabela EFEITO_COLATERAL
+INSERT INTO EFEITO_COLATERAL (descricao)
+VALUES
+    ('Nenhum efeito colateral conhecido'),
+    ('Possíveis reações alérgicas em algumas pessoas'),
+    ('Pode causar irritação estomacal em grandes quantidades'),
+    ('Pode causar sonolência em algumas pessoas'),
+    ('Em excesso, pode causar nervosismo e palpitações');
+
+-- Inserts na tabela PREPARO_INDICACAO
+INSERT INTO PREPARO_INDICACAO (FK_INDICACAO_cod_inc, FK_PREPARO_cod_prp)
+VALUES
+    (1, 1), -- Chá de Capim Limão: Alívio de estresse e ansiedade
+    (2, 2), -- Chá de Camomila: Auxilia na digestão
+    (3, 3), -- Chá de Hortelã: Promove relaxamento e sono tranquilo
+    (4, 4), -- Chá de Erva-Cidreira: Ajuda a aliviar dores de cabeça
+    (5, 5); -- Chá Verde: Estimula o metabolismo e auxilia na perda de peso
+
+-- Inserts na tabela PREPARO_CONTRAINDICACAO
+INSERT INTO PREPARO_CONTRAINDICACAO (FK_CONTRAINDICACAO_cod_cinc, FK_PREPARO_cod_prp)
+VALUES
+    (1, 1), -- Chá de Capim Limão: Não recomendado para pessoas com alergia a capim limão
+    (2, 2), -- Chá de Camomila: Pode causar reações alérgicas em pessoas sensíveis à camomila
+    (3, 3), -- Chá de Hortelã: Evitar em casos de refluxo gastroesofágico
+    (4, 4), -- Chá de Erva-Cidreira: Não recomendado para pessoas com pressão baixa
+    (5, 5); -- Chá Verde: Em excesso, pode causar insônia e irritabilidade
+
+-- Inserts na tabela PREPARO_EFEITO_COLATERAL
+INSERT INTO PREPARO_EFEITO_COLATERAL (FK_EFEITO_COLATERAL_cod_eftcol, FK_PREPARO_cod_prp)
+VALUES
+    (1, 1), -- Chá de Capim Limão: Nenhum efeito colateral conhecido
+    (2, 2), -- Chá de Camomila: Possíveis reações alérgicas em algumas pessoas
+    (3, 3), -- Chá de Hortelã: Pode causar irritação estomacal em grandes quantidades
+    (4, 4), -- Chá de Erva-Cidreira: Pode causar sonolência em algumas pessoas
+    (5, 5); -- Chá Verde: Em excesso, pode causar nervosismo e palpitações
+
+-- Inserts na tabela PLANTA_PREPARO
+INSERT INTO PLANTA_PREPARO (FK_PLANTA_cod_plt, FK_PREPARO_cod_prp)
+VALUES
+    (1, 1), -- Capim Limão: Chá de Capim Limão
+    (2, 2), -- Camomila: Chá de Camomila
+    (3, 3), -- Hortelã: Chá de Hortelã
+    (4, 4), -- Erva-Cidreira: Chá de Erva-Cidreira
+    (5, 5); -- Chá Verde: Chá Verde
