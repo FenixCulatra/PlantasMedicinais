@@ -19,20 +19,64 @@ if (typeof(Storage) !== "undefined") {
       .then(response => response.json())
       .then(data => {
           let pla = data;
-          console.log(pla)
           let preparos = document.querySelector(".preparos");
-          for (let i = 0; i < pla.lenght; i++) {
-            console.log("oi");
+          for (let i = 0; i < pla.length; i++) {
             let div = document.createElement("div");
             let cabeca = document.createElement("div");
             let conte = document.createElement("div");
+            let receita = document.createElement("p")
+            let indica = document.createElement("p");
+            let contraindica = document.createElement("p");
+            let efet_cola = document.createElement("p");
 
-            div.class = "preparo";
-            cabeca.class = "accordion-cabecalho";
-            conte.class = "accordion-conteudo";
-            cabeca.textContent = "Receita" + i;
-            conte.textContent = pla[i]["descricao"];
+            div.className = "preparo";
+            cabeca.className = "accordion-cabecalho fs-5";
+            conte.classname = "accordion-conteudo fs-4";
+            receita.className = "fs-6"
+            indica.className = "fs-6";
+            contraindica.className = "fs-6";
+            efet_cola.className = "fs-6";
+
+            cabeca.textContent = "Receita " + (i + 1);
+            receita.textContent = pla[i]["descricao"];
             
+            console.log(pla[i]["indicacao"].length > 0);
+
+
+            //Pegando as indicacoes
+            let indicacoes = "Indicacoes:  " + pla[i]["indicacao"][0];
+            for (let j = 1; j < pla[i]["indicacao"].length-1; j++) {
+              indicacoes = indicacoes.concat(", " + pla[i]["indicacao"][j]);
+            }
+            indicacoes = indicacoes.concat(" e " + pla[i]["indicacao"].slice(-1));
+            indica.textContent = indicacoes;
+
+            //Pegando as Contraindicacoes
+            let contraindicacoes = "Contraindicacoes:  " + pla[i]["contraindicacao"][0];
+            for (let j = 1; j < pla[i]["contraindicacao"].length-1; j++) {
+              contraindicacoes = contraindicacoes.concat(", " + pla[i]["contraindicacao"][j]);
+            }
+            contraindicacoes = contraindicacoes.concat(" e " + pla[i]["contraindicacao"].slice(-1));
+            contraindica.textContent = contraindicacoes;
+
+            //Pegando as Efeito Colateral
+            let efeitos_colaterais = "Efeitos Colaterais:  " + pla[i]["efeito colateral"][0];
+            for (let j = 1; j < pla[i]["efeito colateral"].length-1; j++) {
+              efeitos_colaterais = efeitos_colaterais.concat(", " + pla[i]["efeito colateral"][j]);
+            }
+            efeitos_colaterais = efeitos_colaterais.concat(" e " + pla[i]["contraindicacao"].slice(-1));
+            efet_cola.textContent = efeitos_colaterais;
+            
+
+            conte.appendChild(receita);
+            conte.appendChild(indica);
+            conte.appendChild(contraindica);
+            conte.appendChild(efet_cola);
+
+            cabeca.addEventListener("click", toggleAccordion);
+            cabeca.setAttribute("children", "hide");
+            conte.style.display = "none";
+
             div.appendChild(cabeca);
             div.appendChild(conte);
             preparos.appendChild(div);
@@ -49,10 +93,11 @@ console.log(planta)
 
 const cabecalho = document.querySelectorAll(".accordion-cabecalho");
 
-cabecalho.forEach((cabecalho) => {
-  cabecalho.addEventListener("click", toggleAccordion);
-  cabecalho.setAttribute("children", "hide");
-});
+// Código que prepara todos os accordions
+// cabecalho.forEach((cabecalho) => {
+//   cabecalho.addEventListener("click", toggleAccordion);
+//   cabecalho.setAttribute("children", "hide");
+// });
 
 function toggleAccordion(event) {
   const cabecalho = event.target;
@@ -70,10 +115,6 @@ function toggleAccordion(event) {
 
 function fechaTodosAccordionContent() {
   const conteudo = document.querySelectorAll(".accordion-conteudo");
-
-  conteudo.forEach((content) => {
-    content.style.display = "none";
-  });
 }
 
 fechaTodosAccordionContent();
