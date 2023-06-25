@@ -1,5 +1,7 @@
 var plantas = document.getElementById("plantas")
 
+
+//Função que gera as miniaturas de todas as plantas
 function loadPlantas(pl) {
     for (let i = 0; i < pl.length; i++) {
     let div         = document.createElement("div");
@@ -28,12 +30,27 @@ function loadPlantas(pl) {
 }
 }
 
-
-
-fetch("https://innatureweb.onrender.com/getAllPlantas/50")
-.then(response => response.json())
-.then(data => {
-    let pl = data['result'];
-    loadPlantas(pl);
-})
-.catch(err => console.log(err));
+var pesquisa = localStorage.getItem("pesquisa");
+localStorage.removeItem("pesquisa");
+if (pesquisa != "" && pesquisa != null) {
+  barra_pesquisa.value = pesquisa;
+  fetch(`https://innatureweb.onrender.com/searchPlanta/${pesquisa}`)
+  .then(response => response.json())
+  .then(data => {
+      let pl = data;
+      if (pl.length > 0) {
+        loadPlantas(pl);
+      } else {
+        plantas.textContent = "Não foi possível achar nada"
+      }
+  })
+  .catch(err => console.log(err));
+} else {
+  fetch("https://innatureweb.onrender.com/getAllPlantas/50")
+  .then(response => response.json())
+  .then(data => {
+      let pl = data['result'];
+      loadPlantas(pl);
+  })
+  .catch(err => console.log(err));
+}

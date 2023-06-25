@@ -9,4 +9,4 @@ https://fenixculatra.github.io/PlantasMedicinais/inNature/index.html
 
 https://fenixculatra.github.io/PlantasMedicinais/inNature2/index.html
 
-V.: 2.28 API UDPATE!!!! quase completo, as plantas.html e planta.html está direitinho
+V.: 2.29 SEARCH UPDATE, TUDO TÁ FUNCIONANDO
