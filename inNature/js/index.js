@@ -11,10 +11,10 @@ function loadCarousel(pl) {
         if (i == 0) {
             item.className = "carousel-item active";
         } else {
-            item.className = "carousel-item active";
+            item.className = "carousel-item ";
         }
         //Colocando um tempo para o accordion
-        item.setAttribute("data-bs-interval", 1)
+        item.setAttribute("data-bs-interval", 1000)
 
 
         //Cria a imagem que vai estar lá
@@ -28,14 +28,12 @@ function loadCarousel(pl) {
 }
 
 // utilizando o fetch para pegar as primeiras plantas (ainda não possuo o comando para as mais pesquisadas)
-fetch(`https://innatureweb.onrender.com/getAllPlantas/3`)
-  .then(response => response.json())
-  .then(data => {
-    pl = data['result'];
-    loadCarousel(pl);
-  })
-  .catch(err => console.log(err));
+// fetch(`https://innatureweb.onrender.com/getAllPlantas/3`)
+//   .then(response => response.json())
+//   .then(data => {
+//     pl = data['result'];
+//     loadCarousel(pl);
+//   })
+//   .catch(err => console.log(err));
 
-  setInterval(() => {
 
-  })

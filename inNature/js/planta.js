@@ -31,13 +31,13 @@ if (typeof(Storage) !== "undefined") {
             let contraindica = document.createElement("p");
             let efet_cola = document.createElement("p");
 
-            div.className = "preparo";
-            cabeca.className = "accordion-cabecalho fs-5";
-            conte.classname = "accordion-conteudo fs-4";
-            receita.className = "fs-6"
-            indica.className = "fs-6";
-            contraindica.className = "fs-6";
-            efet_cola.className = "fs-6";
+            div.className = "preparo text-justify";
+            cabeca.className = "accordion-cabecalho fs-5 text-justify";
+            conte.classname = "accordion-conteudo fs-4 text-justify";
+            receita.className = "fs-6 text-justify"
+            indica.className = "fs-6 text-justify";
+            contraindica.className = "fs-6 text-justify";
+            efet_cola.className = "fs-6 text-justify";
 
             cabeca.textContent = "Receita " + (i + 1);
             receita.textContent = pla[i]["descricao"];

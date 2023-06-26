@@ -20,8 +20,14 @@ const alerta1 = document.getElementById("alerta1");
 const alerta2 = document.getElementById("alerta2");
 const alerta3 = document.getElementById("alerta3");
 const alerta4 = document.getElementById("alerta4");
+const alerta5 = document.getElementById("alerta5");
+const alerta6 = document.getElementById("alerta6");
 
-console.log()
+// Funções auxiliares
+
+function letrasEspacos(str){
+    return /^[A-Za-z\s]*$/.test(str);
+  }
 
 // Validando conteúdo dos formulários
 
@@ -56,6 +62,21 @@ form.addEventListener("submit", (e) => {
         e.preventDefault();
     }else{
         alerta4.style.display = "none";      
+    }
+
+    // Verificando letras e espaços
+    if(!letrasEspacos(nome.value)){
+        alerta5.style.display = "flex";
+        e.preventDefault();
+    } else {
+        alerta5.style.display = "none";
+    }
+
+    if(!letrasEspacos(nome_cientifico.value)){
+        alerta6.style.display = "flex";
+        e.preventDefault();
+    } else {
+        alerta6.style.display = "none";
     }
 
    

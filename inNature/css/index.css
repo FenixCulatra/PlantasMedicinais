@@ -1,41 +1,26 @@
-
-html { 
-    font-size: max(1.5vw, 1.5vh);
-}
-body {
-    display: flex;
-    flex-direction: column;
+.maisPesquisados-title {
+    background-color: transparent;
+    height: fit-content;
 }
 
-/* Pádinga */
-#page {
-    flex-grow: 1;
-}
-
-/* Imagem de Bem vindo */
-#img_bemvindo {
-    height: 12rem;
-    position: relative;
-    top: 50%;
-    transform: translateY(50%);
-}
-
-/* Div com os itens mais pesquisados */
-#MaisPesq{
-    background-color: #4c6b54;
-    color: white;
+#maisPesquisados {
+    background-color: #F8F8F8;
     font-size: 1.8rem;
     border-radius: 10px;
 }
 
-/* div com as colunas das imagens dos mais pesquisados */
 #img_maisPesquisado{
     height: min-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    border-radius: 10px;
 }
 
-/* isso daqui são as div's que são colunas, onde as imagens realmente estão */
-#img_maisPesquisado div.col {
-    height: min-content;
+
+#img_maisPesquisado div {
+    height: 25%;
     width: min-content;
     padding: 4px;
     justify-content: start;
@@ -43,13 +28,8 @@ body {
 
 }
 
-/* Agora sim, ajustando a imagem */
-#img_maisPesquisado div.col img{
-    width: 100%;
-    border-radius: 5px;
+#img_maisPesquisado div img{
+    width: 15rem;
+    border-radius: 50px;
 }
 
-footer {
-    position: relative;
-    bottom: 10px;
-}
