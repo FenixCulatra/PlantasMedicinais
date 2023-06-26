@@ -4,6 +4,8 @@ var planta = null;
 var nome = document.getElementById("nome");
 var imagem = document.getElementById("imagem");
 
+// Checando se local Storage é utilizavel
+
 if (typeof(Storage) !== "undefined") {
     var planta = parseInt(localStorage.getItem("planta selecionada"));
     fetch(`https://innatureweb.onrender.com/planta/${planta}`)
@@ -88,16 +90,10 @@ if (typeof(Storage) !== "undefined") {
     alert("O nosso site não funciona corretamente no seu navegador")
   }
 
-console.log(planta)
-
 
 const cabecalho = document.querySelectorAll(".accordion-cabecalho");
 
-// Código que prepara todos os accordions
-// cabecalho.forEach((cabecalho) => {
-//   cabecalho.addEventListener("click", toggleAccordion);
-//   cabecalho.setAttribute("children", "hide");
-// });
+// funções do accordion
 
 function toggleAccordion(event) {
   const cabecalho = event.target;
