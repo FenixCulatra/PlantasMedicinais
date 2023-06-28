@@ -11,7 +11,7 @@ header.innerHTML = `<nav class="navbar d-inline p-0">
 <div class="navbar-container container-fluid p-0 pt-1 border-bottom bg-primaria">
     
     <!-- Toggler do Modal -->
-    <button type="button" class="btn" id="icone_menu" data-bs-toggle="modal" data-bs-target="#modalId">
+    <button type="button" class="btn" id="icone_menu_hamgurguer" data-bs-toggle="modal" data-bs-target="#modalId">
         <span class="navbar-toggler-icon"></span>
     </button>
 
