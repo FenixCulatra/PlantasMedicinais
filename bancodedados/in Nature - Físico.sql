@@ -252,3 +252,39 @@ VALUES
     (8, 3), -- Chá de Hortelã: Podem ocorrer dores de cabeça
     (9, 4), -- Chá de Erva-Cidreira: Pode causar aumento da frequência urinária
     (10, 5); -- Chá Verde: Pode interferir na qualidade do sono
+
+/* 
+-- Inserts na tabela USUARIO
+INSERT INTO USUARIO (nome, email, senha, permissao)
+VALUES
+    ('João Pedro', 'joaopedro@example.com', 'senha123', 'A'),
+    ('Carlos', 'carlos@example.com', 'senha456', 'A'),
+    ('Maria Silva', 'mariasilva@example.com', 'senha789', 'A'),
+    ('Ana Souza', 'anasouza@example.com', 'senha321', 'C'),
+    ('Ana Maria', 'anamaria@example.com', 'senha321', 'C'),
+    ('Sr. Souza', 'anasouza@example.com', 'senha321', 'C'),
+    ('Moraes', 'anasouza@example.com', 'senha321', 'C'),
+    ('Jacinto', 'anasouza@example.com', 'senha321', 'N'),
+    ('Arares', 'arares@gmail.com', 'arai9023ds', 'N'),
+    ('Monteiro', 'monteiro83@gmail.com', 'kdjsa92jn3', 'N'),
+    ('Joana', 'joana.filha@hotmail.com', 'luies42', 'N'),
+    ('Lobato Ferreira', 'l0bato.ferro@gmail.com', 'Laka8932r', 'N'),
+    ('João Vitor', 'joao.vitor.sch@hotmail.com', 'BananaFrita32', 'N'),
+    ('Nicolas', 'nicolas@gmail.com', 'L0dsani', 'N'),
+    ('Nicole', 'nicole73@gmail.com', 'batataB0azona12345543', 'N'),
+    ('Maria socorro', 'maria.scorro@hotmail.com', '328ff98293jfs', 'N'),
+    ('Karine dos Santos', 'karine.asnto@gmail.com', 'fçome89wr23', 'N'),
+    ('Amanda', 'amanda.hasio@gmail.com', 'Laiosed232', 'N'),
+    ('Ajudada Silveira', 'ajudada.silva@gmail.com', 'Maionese23', 'N'),
+    ('Manita', 'manita097@gmail.com', 'Mariana43', 'N'),
+    ('Sucrilhos', 'kassita@hotmail.com', 'KassitinhaMorena32', 'N'),
+    ('Matador de porcos', '0matador.de.porcos@gmail.com', 'VouBomar23', 'N'),
+    ('Shaolin Almeida', 'shaolin.almeida@gmail.com', 'Jacossa231', 'N'),
+    ('Pedro Farange', 'predin45.farange@hotmail.com', 'QueloPlastek213', 'N'),
+    ('Orgeio Savant', 'orgeio.savant@hotmail.com', '231093432', 'N'),
+    ('Laione', 'laione.13232@gmail.com', 'gaelGareno23', 'N'),
+    ('Lionel', 'lionel.messi@gmail.com', 'odiasj90', 'N'),
+    ('Messi', 'messi.lionel@hotmail.com', 'Weorkaste4530', 'N'),
+    ('Carlos Henrique', 'anasouza@example.com', 'senha321', 'N'),
+    ('Pedro Henrique', 'pedrohenrique@example.com', 'senha654', 'A');
+*/
