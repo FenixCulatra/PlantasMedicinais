@@ -127,6 +127,16 @@ VALUES
     ('Erva-Cidreira', 'https://fenixculatra.github.io/PlantasMedicinais/imagens/erva-cidreira.jpg'),
     ('Chá Verde', 'https://fenixculatra.github.io/PlantasMedicinais/imagens/cha-verde.jpg');
 
+INSERT INTO USUARIO_PLANTA (FK_USUARIO_id_usr, FK_PLANTA_cod_plt)
+VALUES
+    (1, 1), -- João Pedro: Capim Limão
+    (1, 3), -- João Pedro: Hortelã
+    (2, 2), -- Carlos: Camomila
+    (2, 4), -- Carlos: Erva-Cidreira
+    (3, 1), -- Maria Silva: Capim Limão
+    (4, 2), -- Ana Souza: Camomila
+    (5, 3); -- Ana Maria: Hortelã
+
 -- Inserts na tabela PREPARO
 INSERT INTO PREPARO (descricao)
 VALUES
