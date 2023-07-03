@@ -10,7 +10,7 @@ Componentes:
 Validação:
 -Nos campos nome e nome científico do cadastro-planta.html
 
-Local Storage:
+Local Storage: Sim!
 
 Organização do código Javascript:
 -Tudo identado e comentado;
