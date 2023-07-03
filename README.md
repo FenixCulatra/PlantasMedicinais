@@ -1,19 +1,23 @@
 # PlantasMedicinais
 
 Responsividade:
--Todas as telas são responsívas, sendo os arquivos: cadastro-planta.html, cadastro-usuario.html, index.html, login.html, planta.html, plantas.html e usuario.html.
+- Todas as telas são responsívas, sendo os arquivos: cadastro-planta.html, cadastro-usuario.html, index.html, login.html, planta.html, plantas.html e usuario.html.
 
 Componentes:
--Accordion: na tela de cada planta;
--Carrossel: no index.html
+- Accordion: na tela de cada planta;
+- Carrossel: no index.html
 
 Validação:
--Nos campos nome e nome científico do cadastro-planta.html
+- Nos campos nome e nome científico do cadastro-planta.html
 
-Local Storage: Sim!
+Local Storage:
+- É possível cadastrar e logar
+- É possível ver as informações da conta
+- É possível desconectar a conta
+- Ainda não é conectado ao servidor
 
 Organização do código Javascript:
--Tudo identado e comentado;
+- Tudo identado e comentado;
 - Os arquivos de javascript estão dentro da pasta js.
 
 Hospedagem do website
@@ -24,4 +28,4 @@ https://fenixculatra.github.io/PlantasMedicinais/imagens/gegibre.jpg
 
 https://fenixculatra.github.io/PlantasMedicinais/inNature/index.html
 
-V.: 2.32 SEARCH UPDATE, TUDO TÁ FUNCIONANDO
+V.: 2.33 LOGIN UPDATE

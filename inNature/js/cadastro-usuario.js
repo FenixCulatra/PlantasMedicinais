@@ -8,6 +8,7 @@ const nome = document.getElementById("cd_nome");
 const email = document.getElementById("cd_email");
 const senha = document.getElementById("cd_senha");
 const conf_senha = document.getElementById("cd_senha_confirmar");
+const submit = document.getElementById("submit");
 
 
 
@@ -32,37 +33,42 @@ function contador(string){
 
 // Validando conteúdo dos formulários
 
-form.addEventListener("submit", (e) => {
-
+submit.addEventListener("click", (e) => {
+    let certo = true;
     // Campos preenchidos
-    if(nome.value == 0){
+    if (nome.value == 0){
         alerta1.style.display = "flex";
+        certo = false;
         e.preventDefault();
-    }else{
+    } else {
         alerta1.style.display = "none";      
     }
     
-    if(email.value == 0){
+    if (email.value == 0){
+        certo = false;
         alerta2.style.display = "flex";
         e.preventDefault();
-    }else{
+    } else {
         alerta2.style.display = "none";      
     }
-    if(senha.value == 0){
+    if (senha.value == 0){
+        certo = false;
         alerta4.style.display = "flex";
         e.preventDefault();
-    }else{
+    }  {
         alerta4.style.display = "none";      
     }
-    if(conf_senha.value == 0){
+    if (conf_senha.value == 0){
+        certo = false;
         alerta6.style.display = "flex";
         e.preventDefault();
-    }else{
+    } else {
         alerta6.style.display = "none";      
     }
 
     // validando email
-    if(email.value.indexOf("@") == -1){
+    if (email.value.indexOf("@") == -1){
+        certo = false;
         alerta3.style.display = "flex";
         e.preventDefault();
     } else {
@@ -74,7 +80,8 @@ form.addEventListener("submit", (e) => {
     // controle de caracteres da senha
     let cont = contador(senha.value);
 
-    if(cont < 6 || cont>20){
+    if (cont < 6 || cont>20){
+        certo = false;
         alerta5.style.display = "flex";
         e.preventDefault();
     } else {
@@ -82,10 +89,31 @@ form.addEventListener("submit", (e) => {
     }
 
     // validando senhas iguais
-    if(senha.value != conf_senha.value){
+    if (senha.value != conf_senha.value){
+        certo = false;
         alerta7.style.display = "flex";
         e.preventDefault();
     } else {
         alerta7.style.display = "none";
+    }
+
+    if (localStorage.getItem("email") == email.value) {
+        certo = false;
+        alert("Email já cadastrado")
+    }
+
+    if (certo) {
+        if (typeof(Storage) !== "undefined") {
+            // Store
+            localStorage.setItem("nome", nome.value);
+            localStorage.setItem("email", email.value);
+            localStorage.setItem("senha", senha.value);
+            localStorage.setItem("logado", "1");
+            window.location.replace("usuario.html");
+            
+          } else {
+           alert("Não é possível logar neste navegador");
+          }
+        
     }
 });

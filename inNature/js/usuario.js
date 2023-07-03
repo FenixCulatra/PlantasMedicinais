@@ -3,7 +3,7 @@
 
 var nome = document.querySelector(".nome");
 var email = document.querySelector(".email");
-
+const botao = document.getElementById("desconectar");
 
 if (typeof(Storage) !== "undefined") {
     let tnome = localStorage.getItem("nome");
@@ -13,3 +13,8 @@ if (typeof(Storage) !== "undefined") {
   } else {
    alert("Não é possível logar neste navegador");
   }
+
+  botao.addEventListener("click", () => {
+    localStorage.setItem("logado", "0");
+    window.location.replace("index.html");
+  })
