@@ -21,8 +21,10 @@ Organização do código Javascript:
 - Os arquivos de javascript estão dentro da pasta js.
 
 Hospedagem do website
-Está no infinit free:
+Está no infinit free: <br>
 http://innature.42web.io/
+
+Links para facilitar o desenvolvimento: <br>
 
 https://fenixculatra.github.io/PlantasMedicinais/imagens/gegibre.jpg 
 
