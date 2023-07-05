@@ -127,7 +127,7 @@ VALUES
     ('Erva-Cidreira', 'https://fenixculatra.github.io/PlantasMedicinais/imagens/erva-cidreira.jpg'),
     ('Chá Verde', 'https://fenixculatra.github.io/PlantasMedicinais/imagens/cha-verde.jpg');
 
-INSERT INTO USUARIO_PLANTA (FK_USUARIO_id_usr, FK_PLANTA_cod_plt)
+INSERT INTO USUARIO_PLANTA (FK_USUARIO_cod_usr, FK_PLANTA_cod_plt)
 VALUES
     (1, 1), -- João Pedro: Capim Limão
     (1, 3), -- João Pedro: Hortelã
@@ -145,7 +145,7 @@ VALUES
     ('Chá de Hortelã: Adicionar folhas de hortelã em água fervente por 3 minutos.'),
     ('Chá de Erva-Cidreira: Infundir folhas de erva-cidreira em água quente por 7 minutos.'),
     ('Chá Verde: Preparar o chá verde em água quente por 2 minutos.'),
-    ('Coloque 1 colher de sopa de capim limão em uma xícara de água fervente. Deixe em infusão por 5 minutos e coe antes de consumir.')
+    ('Coloque 1 colher de sopa de capim limão em uma xícara de água fervente. Deixe em infusão por 5 minutos e coe antes de consumir.'),
     ('Adicione 2 colheres de sopa de camomila em uma xícara de água quente. Deixe descansar por 10 minutos e coe antes de beber.'),
     ('Pegue algumas folhas de hortelã fresca e amasse suavemente. Coloque as folhas em uma xícara de água fervente e deixe em infusão por 5 minutos. Coe antes de servir.'),
     ('Coloque 1 colher de sopa de erva-cidreira em uma xícara de água quente. Deixe em infusão por 10 minutos e coe antes de tomar.'),
@@ -155,7 +155,7 @@ VALUES
 INSERT INTO INDICACAO (descricao)
 VALUES
     ('Alívio de estresse'),
-    ('Alívio de ansiedade')
+    ('Alívio de ansiedade'),
     ('Auxilia na digestão'),
     ('Promove relaxamento'),
     ('Promove sono tranquilo'),
@@ -195,7 +195,7 @@ VALUES
     ('Possíveis reações alérgicas em algumas pessoas'),
     ('Pode causar irritação estomacal em grandes quantidades'),
     ('Pode causar sonolência em algumas pessoas'),
-    ('Em excesso, pode causar nervosismo e palpitações')
+    ('Em excesso, pode causar nervosismo e palpitações'),
     ('Em excesso, pode causar dores nas articulações'),
     ('Pode levar à insuficiência renal'),
     ('Pode colaborar com a anorexia'),
