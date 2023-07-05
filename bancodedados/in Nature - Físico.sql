@@ -144,16 +144,30 @@ VALUES
     ('Chá de Camomila: Colocar as flores de camomila em água quente por 5 minutos.'),
     ('Chá de Hortelã: Adicionar folhas de hortelã em água fervente por 3 minutos.'),
     ('Chá de Erva-Cidreira: Infundir folhas de erva-cidreira em água quente por 7 minutos.'),
-    ('Chá Verde: Preparar o chá verde em água quente por 2 minutos.');
+    ('Chá Verde: Preparar o chá verde em água quente por 2 minutos.'),
+    ('Coloque 1 colher de sopa de capim limão em uma xícara de água fervente. Deixe em infusão por 5 minutos e coe antes de consumir.')
+    ('Adicione 2 colheres de sopa de camomila em uma xícara de água quente. Deixe descansar por 10 minutos e coe antes de beber.'),
+    ('Pegue algumas folhas de hortelã fresca e amasse suavemente. Coloque as folhas em uma xícara de água fervente e deixe em infusão por 5 minutos. Coe antes de servir.'),
+    ('Coloque 1 colher de sopa de erva-cidreira em uma xícara de água quente. Deixe em infusão por 10 minutos e coe antes de tomar.'),
+    ('Aqueça uma xícara de água, mas não deixe ferver. Adicione 1 colher de chá verde e deixe em infusão por 2-3 minutos. Coe antes de consumir.');
 
 -- Inserts na tabela INDICACAO
 INSERT INTO INDICACAO (descricao)
 VALUES
-    ('Alívio de estresse e ansiedade'),
+    ('Alívio de estresse'),
+    ('Alívio de ansiedade')
     ('Auxilia na digestão'),
-    ('Promove relaxamento e sono tranquilo'),
+    ('Promove relaxamento'),
+    ('Promove sono tranquilo'),
     ('Ajuda a aliviar dores de cabeça'),
-    ('Estimula o metabolismo e auxilia na perda de peso');
+    ('Auxilia na perda de peso'),
+    ('Ajuda com diabetes'),
+    ('Ajuda com diarreia'),
+    ('Promove a saúde cardiovascular'),
+    ('Ajuda a aliviar sintomas de gripe e resfriado'),
+    ('Contribui para o alívio de dores musculares'),
+    ('Auxilia na digestão de alimentos pesados'),
+    ('Melhora o sistema imunológico');
 
 -- Inserts na tabela CONTRAINDICACAO
 INSERT INTO CONTRAINDICACAO (descricao)
@@ -162,7 +176,17 @@ VALUES
     ('Pode causar reações alérgicas em pessoas sensíveis à camomila'),
     ('Evitar em casos de refluxo gastroesofágico'),
     ('Não recomendado para pessoas com pressão baixa'),
-    ('Em excesso, pode causar insônia e irritabilidade');
+    ('Em excesso, pode causar insônia e irritabilidade'),
+    ('Não recomendado para pessoas diabéticas'),
+    ('Evitar em saco de gravidez'),
+    ('Em excesso, pode causar vômitos'),
+    ('Em excesso pode causar diarreias'),
+    ('Não recomendado para gestantes'),
+    ('Evitar em casos de alergia ao ingrediente'),
+    ('Não recomendado para pessoas com pressão alta'),
+    ('Pode causar irritação gastrointestinal em algumas pessoas'),
+    ('Em excesso, pode afetar a absorção de nutrientes');
+
 
 -- Inserts na tabela EFEITO_COLATERAL
 INSERT INTO EFEITO_COLATERAL (descricao)
@@ -171,97 +195,153 @@ VALUES
     ('Possíveis reações alérgicas em algumas pessoas'),
     ('Pode causar irritação estomacal em grandes quantidades'),
     ('Pode causar sonolência em algumas pessoas'),
-    ('Em excesso, pode causar nervosismo e palpitações');
-
--- Inserts na tabela PREPARO_INDICACAO
-INSERT INTO PREPARO_INDICACAO (FK_INDICACAO_cod_inc, FK_PREPARO_cod_prp)
-VALUES
-    (1, 1), -- Chá de Capim Limão: Alívio de estresse e ansiedade
-    (2, 2), -- Chá de Camomila: Auxilia na digestão
-    (3, 3), -- Chá de Hortelã: Promove relaxamento e sono tranquilo
-    (4, 4), -- Chá de Erva-Cidreira: Ajuda a aliviar dores de cabeça
-    (5, 5); -- Chá Verde: Estimula o metabolismo e auxilia na perda de peso
-
--- Inserts na tabela PREPARO_CONTRAINDICACAO
-INSERT INTO PREPARO_CONTRAINDICACAO (FK_CONTRAINDICACAO_cod_cinc, FK_PREPARO_cod_prp)
-VALUES
-    (1, 1), -- Chá de Capim Limão: Não recomendado para pessoas com alergia a capim limão
-    (2, 2), -- Chá de Camomila: Pode causar reações alérgicas em pessoas sensíveis à camomila
-    (3, 3), -- Chá de Hortelã: Evitar em casos de refluxo gastroesofágico
-    (4, 4), -- Chá de Erva-Cidreira: Não recomendado para pessoas com pressão baixa
-    (5, 5); -- Chá Verde: Em excesso, pode causar insônia e irritabilidade
-
--- Inserts na tabela PREPARO_EFEITO_COLATERAL
-INSERT INTO PREPARO_EFEITO_COLATERAL (FK_EFEITO_COLATERAL_cod_eftcol, FK_PREPARO_cod_prp)
-VALUES
-    (1, 1), -- Chá de Capim Limão: Nenhum efeito colateral conhecido
-    (2, 2), -- Chá de Camomila: Possíveis reações alérgicas em algumas pessoas
-    (3, 3), -- Chá de Hortelã: Pode causar irritação estomacal em grandes quantidades
-    (4, 4), -- Chá de Erva-Cidreira: Pode causar sonolência em algumas pessoas
-    (5, 5); -- Chá Verde: Em excesso, pode causar nervosismo e palpitações
-
--- Inserts na tabela PLANTA_PREPARO
-INSERT INTO PLANTA_PREPARO (FK_PLANTA_cod_plt, FK_PREPARO_cod_prp)
-VALUES
-    (1, 1), -- Capim Limão: Chá de Capim Limão
-    (2, 2), -- Camomila: Chá de Camomila
-    (3, 3), -- Hortelã: Chá de Hortelã
-    (4, 4), -- Erva-Cidreira: Chá de Erva-Cidreira
-    (5, 5); -- Chá Verde: Chá Verde
-
--- Inserts na tabela INDICACAO
-INSERT INTO INDICACAO (descricao)
-VALUES
-    ('Promove a saúde cardiovascular'),
-    ('Ajuda a aliviar sintomas de gripe e resfriado'),
-    ('Contribui para o alívio de dores musculares'),
-    ('Auxilia na digestão de alimentos pesados'),
-    ('Melhora o sistema imunológico');
-
--- Inserts na tabela PREPARO_INDICACAO
-INSERT INTO PREPARO_INDICACAO (FK_INDICACAO_cod_inc, FK_PREPARO_cod_prp)
-VALUES
-    (6, 1), -- Chá de Capim Limão: Promove a saúde cardiovascular
-    (7, 2), -- Chá de Camomila: Ajuda a aliviar sintomas de gripe e resfriado
-    (8, 3), -- Chá de Hortelã: Contribui para o alívio de dores musculares
-    (9, 4), -- Chá de Erva-Cidreira: Auxilia na digestão de alimentos pesados
-    (10, 5); -- Chá Verde: Melhora o sistema imunológico
-
--- Inserts na tabela CONTRAINDICACAO
-INSERT INTO CONTRAINDICACAO (descricao)
-VALUES
-    ('Não recomendado para gestantes'),
-    ('Evitar em casos de alergia ao ingrediente'),
-    ('Não recomendado para pessoas com pressão alta'),
-    ('Pode causar irritação gastrointestinal em algumas pessoas'),
-    ('Em excesso, pode afetar a absorção de nutrientes');
-
--- Inserts na tabela PREPARO_CONTRAINDICACAO
-INSERT INTO PREPARO_CONTRAINDICACAO (FK_CONTRAINDICACAO_cod_cinc, FK_PREPARO_cod_prp)
-VALUES
-    (6, 1), -- Chá de Capim Limão: Não recomendado para gestantes
-    (7, 2), -- Chá de Camomila: Evitar em casos de alergia ao ingrediente
-    (8, 3), -- Chá de Hortelã: Não recomendado para pessoas com pressão alta
-    (9, 4), -- Chá de Erva-Cidreira: Pode causar irritação gastrointestinal em algumas pessoas
-    (10, 5); -- Chá Verde: Em excesso, pode afetar a absorção de nutrientes
-
--- Inserts na tabela EFEITO_COLATERAL
-INSERT INTO EFEITO_COLATERAL (descricao)
-VALUES
+    ('Em excesso, pode causar nervosismo e palpitações')
+    ('Em excesso, pode causar dores nas articulações'),
+    ('Pode levar à insuficiência renal'),
+    ('Pode colaborar com a anorexia'),
+    ('Pode te dar azar'),
     ('Possível irritação na pele'),
     ('Pode causar sonolência em algumas pessoas'),
     ('Podem ocorrer dores de cabeça'),
     ('Pode causar aumento da frequência urinária'),
     ('Pode interferir na qualidade do sono');
 
+-- Inserts na tabela PREPARO_INDICACAO
+INSERT INTO PREPARO_INDICACAO (FK_INDICACAO_cod_inc, FK_PREPARO_cod_prp)
+VALUES
+    (1, 1),
+    (1, 6),
+    (1, 7),
+    (1, 9),
+    (2, 2),
+    (2, 4),
+    (2, 10),
+    (3, 3),
+    (3, 7),
+    (3, 12),
+    (3, 13),
+    (3, 14),
+    (4, 1),
+    (4, 5),
+    (4, 6),
+    (5, 2),
+    (5, 3),
+    (5, 9),
+    (5, 13),
+    (6, 13),
+    (6, 14),
+    (7, 2),
+    (7, 5),
+    (7, 6),
+    (7, 8),
+    (8, 4),
+    (8, 5),
+    (8, 12),
+    (9, 1),
+    (9, 2),
+    (9, 5),
+    (9, 6),
+    (9, 7),
+    (10, 3),
+    (10, 8),
+    (10, 10),
+    (10, 11),
+    (10, 14);
+
+-- Inserts na tabela PREPARO_CONTRAINDICACAO
+INSERT INTO PREPARO_CONTRAINDICACAO (FK_CONTRAINDICACAO_cod_cinc, FK_PREPARO_cod_prp)
+VALUES
+    (1, 1),
+    (1, 4),
+    (1, 7),
+    (1, 8),
+    (1, 11),
+    (1, 13),
+    (2, 3),
+    (2, 5),
+    (2, 9),
+    (3, 3),
+    (3, 7),
+    (3, 10),
+    (3, 11),
+    (3, 14),
+    (4, 2),
+    (4, 3),
+    (4, 7),
+    (4, 11),
+    (5, 1),
+    (5, 3),
+    (5, 4),
+    (5, 6),
+    (5, 10),
+    (6, 9),
+    (6, 11),
+    (7, 7),
+    (7, 8),
+    (7, 10),
+    (7, 11),
+    (7, 12),
+    (8, 12),
+    (8, 13),
+    (8, 14),
+    (9, 1),
+    (9, 3),
+    (9, 4),
+    (9, 12),
+    (10, 3),
+    (10, 7),
+    (10, 10),
+    (10, 11),
+    (10, 12);
+
 -- Inserts na tabela PREPARO_EFEITO_COLATERAL
 INSERT INTO PREPARO_EFEITO_COLATERAL (FK_EFEITO_COLATERAL_cod_eftcol, FK_PREPARO_cod_prp)
 VALUES
-    (6, 1), -- Chá de Capim Limão: Possível irritação na pele
-    (7, 2), -- Chá de Camomila: Pode causar sonolência em algumas pessoas
-    (8, 3), -- Chá de Hortelã: Podem ocorrer dores de cabeça
-    (9, 4), -- Chá de Erva-Cidreira: Pode causar aumento da frequência urinária
-    (10, 5); -- Chá Verde: Pode interferir na qualidade do sono
+    (1, 1),
+    (1, 6),
+    (1, 7),
+    (1, 9),
+    (1, 13),
+    (2, 3),
+    (2, 8),
+    (3, 1),
+    (3, 4),
+    (3, 5),
+    (3, 6),
+    (3, 10),
+    (3, 11),
+    (3, 14),
+    (4, 2),
+    (4, 3),
+    (4, 9),
+    (5, 6),
+    (5, 7),
+    (6, 8),
+    (7, 1),
+    (7, 5),
+    (7, 10),
+    (7, 11),
+    (8, 10),
+    (8, 11),
+    (8, 12),
+    (8, 13),
+    (8, 14),
+    (9, 1),
+    (9, 6),
+    (9, 7),
+    (9, 12),
+    (9, 14),
+    (10, 2),
+    (10, 10),
+    (10, 12),
+    (10, 13);
+
+
+
+    
+
+
+
 
 /* 
 -- Inserts na tabela USUARIO
