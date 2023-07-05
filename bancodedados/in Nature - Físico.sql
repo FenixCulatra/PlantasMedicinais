@@ -151,6 +151,20 @@ VALUES
     ('Coloque 1 colher de sopa de erva-cidreira em uma xícara de água quente. Deixe em infusão por 10 minutos e coe antes de tomar.'),
     ('Aqueça uma xícara de água, mas não deixe ferver. Adicione 1 colher de chá verde e deixe em infusão por 2-3 minutos. Coe antes de consumir.');
 
+-- Inserts na tabela PLANTA_PREPARO
+INSERT INTO PLANTA_PREPARO (FK_PLANTA_cod_plt, FK_PREPARO_cod_prp)
+VALUES
+    (1, 1),
+    (2, 2),
+    (3, 3),
+    (4, 4),
+    (5, 5),
+    (1, 6),
+    (2, 7),
+    (3, 8),
+    (4, 9),
+    (5, 10);
+
 -- Inserts na tabela INDICACAO
 INSERT INTO INDICACAO (descricao)
 VALUES
