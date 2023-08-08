@@ -21,7 +21,7 @@ Organização do código Javascript:
 - Os arquivos de javascript estão dentro da pasta js.
 
 Hospedagem do website
-Está no infinit free: <br>
+Está no infinity free: <br>
 http://innature.42web.io/
 
 Links para facilitar o desenvolvimento: <br>
