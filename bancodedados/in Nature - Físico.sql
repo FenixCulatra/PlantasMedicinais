@@ -58,6 +58,23 @@ CREATE TABLE PREPARO_EFEITO_COLATERAL (
     FK_EFEITO_COLATERAL_cod_eftcol serial,
     FK_PREPARO_cod_prp serial
 );
+
+create table COMENTARIO (
+    cod_cmt serial unique not null,
+    FK_USUARIO_cod_usr serial,
+    FK_PLANTA_cod_plt serial,
+    descricao varchar(200) not null
+);
+
+ALTER TABLE COMENTARIO ADD CONSTRAINT FK_COMENTARIO_1
+    FOREIGN KEY (FK_USUARIO_cod_usr)
+    REFERENCES USUARIO (cod_usr)
+    ON DELETE SET NULL;
+
+ALTER TABLE COMENTARIO ADD CONSTRAINT FK_COMENTARIO_2
+    FOREIGN KEY (FK_PLANTA_cod_plt)
+    REFERENCES PLANTA (cod_plt)
+    ON DELETE SET NULL;
  
 ALTER TABLE USUARIO_PLANTA ADD CONSTRAINT FK_USUARIO_PLANTA_1
     FOREIGN KEY (FK_USUARIO_cod_usr)
@@ -392,3 +409,5 @@ VALUES
     ('Carlos Henrique', 'anasouza@example.com', 'senha321', 'N'),
     ('Pedro Henrique', 'pedrohenrique@example.com', 'senha654', 'A');
 */
+
+
