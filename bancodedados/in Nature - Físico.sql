@@ -126,6 +126,9 @@ ALTER TABLE PREPARO_EFEITO_COLATERAL ADD CONSTRAINT FK_PREPARO_EFEITO_COLATERAL_
     REFERENCES PREPARO (cod_prp)
     ON DELETE SET NULL;
 
+alter table PLANTA
+add column DESCRICAO varchar(500) not null;
+
 -- Inserts na tabela USUARIO
 INSERT INTO USUARIO (nome, email, senha, permissao)
 VALUES
